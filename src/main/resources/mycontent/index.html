@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kotlin Web Application</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+</head>
+<body>
+<h1>
+    Score Log
+</h1>
+<!--Form with textbox and button to receive input-->
+<form action="/submit_score" method="post">
+    <input name="data" type="number">
+    <button type="submit">Submit Score</button>
+</form>
+
+<p>
+    Mean Score: {{mean_score}}
+</p>
+<p>
+    Best Score: {{best_score}}
+</p>
+<p>
+    Worst Score: {{worst_score}}
+</p>
+<p>
+    Total Number of Entries: {{total_entries}}
+</p>
+
+<!--Print each of the entered scores in a list-->
+<h2>
+    Scores:
+</h2>
+<ul>
+    {{#scores}}
+    <li>{{value}}</li>
+    {{/scores}}
+</ul>
+
+</body>
+</html>
