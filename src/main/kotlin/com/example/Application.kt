@@ -102,7 +102,7 @@ fun getTotalEntries(): Int {
 data class Score(val value: Int)
 
 /**
- * Gets all the scores in the file. I got this line with the help of chat.openai.com
+ * Gets all the scores in the file. I got this function with the help of chat.openai.com
  * @return scores.
  */
 fun getScores(): List<Score> {
