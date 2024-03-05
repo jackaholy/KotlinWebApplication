@@ -32,7 +32,9 @@ fun Application.configureRouting() {
         post("/submit_score") {
             val formParameters = call.receiveParameters()
             val score = formParameters["data"].toString()
-            newScore(score.toInt())
+            if (score != "") {
+                newScore(score.toInt())
+            }
             // Always go back to the same page.
             call.respondRedirect("/")
         }

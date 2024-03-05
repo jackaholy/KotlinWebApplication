@@ -39,7 +39,11 @@ fun Application.module() {
  */
 fun newScore(data: Int) {
     // Add score to the csv file
-    File("src/main/resources/scores.csv").appendText("$data\n")
+    if (data == null) {
+        return
+    } else {
+        File("src/main/resources/scores.csv").appendText("$data\n")
+    }
 }
 
 /**
